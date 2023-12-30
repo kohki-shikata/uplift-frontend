@@ -1,66 +1,73 @@
 <nav class="card bg-White h-fit rounded-md">
-  <h2 class="text-[12px] text-MainDark bg-MainLight p-2">営業管理</h2>
-  <ul>
-    <li class="border-b-[1px] border-MainHighlight">
-      <a class="w-full h-full flex flex-row items-center justify-between p-3 hover:bg-MainHighlight" href="">
+  <div class="nav-group" x-data="{ isOpen: true }">
+    <h2 class="text-[12px] text-MainDark bg-MainLight p-2 flex flex-row items-center gap-2">
+      <button class="w-[11px] h-[11px] fill-MainDark relative top-0.5" @click="console.log('click')">
+        <include src="components/icon/chevron-down.svg"></include>
+      </button>
+      <span>営業管理</span>
+    </h2>
+    <ul x-show="isOpen === true">
+      <li class="border-b-[1px] border-MainHighlight">
+        <a class="w-full h-full flex flex-row items-center justify-between p-3 hover:bg-MainHighlight" href="">
+          <div class="flex flex-row justify-start items-center gap-2">
+            <span>
+              <include src="components/icon/analytics.svg"></include>
+            </span>
+            <span class="text-MainDark">分析</span>
+          </div>
+          <span>
+            <include src="components/icon/chevron-right.svg"></include>
+          </span>
+        </a>
+      </li>
+      <li class="w-full h-full flex flex-row items-center justify-between p-3">
         <div class="flex flex-row justify-start items-center gap-2">
           <span>
             <include src="components/icon/analytics.svg"></include>
           </span>
-          <span class="text-MainDark">分析</span>
+          <span class="text-MainDark">案件</span>
         </div>
-        <span>
-          <include src="components/icon/chevron-right.svg"></include>
-        </span>
-      </a>
-    </li>
-    <li class="w-full h-full flex flex-row items-center justify-between p-3">
-      <div class="flex flex-row justify-start items-center gap-2">
-        <span>
-          <include src="components/icon/analytics.svg"></include>
-        </span>
-        <span class="text-MainDark">案件</span>
-      </div>
-      <ul class="flex flex-row gap-[1px] rounded-md overflow-clip">
-        <li>
-          <a href="" class="button text-[11px] gap-1 min-h-[20px] inline-flex items-center p-2">
-            <span>
-              <include src="components/icon/plus.svg"></include>
-            </span>
-            <span>追加</span>
-          </a>
-        </li>
-        <li>
-          <a href="" class="button text-[11px] gap-1 min-h-[20px] inline-flex items-center p-2">
-            <span><include src="components/icon/list.svg"></include></span>
-            <span>一覧</span>
-          </a>
-        </li>
-      </ul>
-    </li>
-    <li class="w-full h-full flex flex-row items-center justify-between p-3">
-      <div class="flex flex-row justify-start items-center gap-2">
-        <span>
-          <include src="components/icon/analytics.svg"></include>
-        </span>
-        <span class="text-MainDark">顧客</span>
-      </div>
-      <ul class="flex flex-row gap-[1px] rounded-md overflow-clip">
-        <li>
-          <a href="" class="button text-[11px] gap-1 min-h-[20px] inline-flex items-center p-2">
-            <span>
-              <include src="components/icon/plus.svg"></include>
-            </span>
-            <span>追加</span>
-          </a>
-        </li>
-        <li>
-          <a href="" class="button text-[11px] gap-1 min-h-[20px] inline-flex items-center p-2">
-            <span><include src="components/icon/list.svg"></include></span>
-            <span>一覧</span>
-          </a>
-        </li>
-      </ul>
-    </li>
-  </ul>
+        <ul class="flex flex-row gap-[1px] rounded-md overflow-clip">
+          <li>
+            <a href="" class="button text-[11px] gap-1 min-h-[20px] inline-flex items-center p-2">
+              <span>
+                <include src="components/icon/plus.svg"></include>
+              </span>
+              <span>追加</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="button text-[11px] gap-1 min-h-[20px] inline-flex items-center p-2">
+              <span><include src="components/icon/list.svg"></include></span>
+              <span>一覧</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="w-full h-full flex flex-row items-center justify-between p-3">
+        <div class="flex flex-row justify-start items-center gap-2">
+          <span>
+            <include src="components/icon/analytics.svg"></include>
+          </span>
+          <span class="text-MainDark">顧客</span>
+        </div>
+        <ul class="flex flex-row gap-[1px] rounded-md overflow-clip">
+          <li>
+            <a href="" class="button text-[11px] gap-1 min-h-[20px] inline-flex items-center p-2">
+              <span>
+                <include src="components/icon/plus.svg"></include>
+              </span>
+              <span>追加</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="button text-[11px] gap-1 min-h-[20px] inline-flex items-center p-2">
+              <span><include src="components/icon/list.svg"></include></span>
+              <span>一覧</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </nav>
