@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card {
+    @apply shadow-[0_2px_2px_0_rgba(0,0,0,0.3)]
+  }
+  .button {
+    @apply bg-MainDark text-White font-bold hover:bg-Main transition-all;
+  }
+}
